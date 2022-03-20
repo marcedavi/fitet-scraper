@@ -3,31 +3,37 @@
         {
             "name": "A.S.D. T.T. FERRARA 'A'",
             "displayName": "A.S.D. T.T. FERRARA A",
+            "league": "B2",
             "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=12&ANNO=36"
         },
         {
             "name": "A.S.D. T.T. FERRARA 'B'",
             "displayName": "A.S.D. T.T. FERRARA B",
+            "league": "C1",
             "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=40&ANNO=36"
         },
         {
             "name": "A.S.D. T.T. FERRARA C",
             "displayName": "A.S.D. T.T. FERRARA C",
+            "league": "C2",
             "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=902&ANNO=36"
         },
         {
             "name": "A.S.D. T.T. FERRARA D",
             "displayName": "A.S.D. T.T. FERRARA D",
+            "league": "D1",
             "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=904&ANNO=36"
         },
         {
             "name": "A.S.D. T.T. FERRARA E",
             "displayName": "A.S.D. T.T. FERRARA E",
+            "league": "D2",
             "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=908&ANNO=36"
         },
         {
             "name": "A.S.D. T.T. FERRARA F",
             "displayName": "A.S.D. T.T. FERRARA F",
+            "league": "D2",
             "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=909&ANNO=36"
         }
     ]

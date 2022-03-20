@@ -53,12 +53,14 @@ async function scrapeMatches() {
                     matches.push({
                         "homeSquad": firstRoundHomeSquad,
                         "guestSquad": secondRoundHomeSquad,
+                        "home": firstRoundHomeSquad === squad.name ? true : false,
                         "date": firstRoundDate,
                         "time": firstRoundTime,
                         "result": firstRoundResult
                     }, {
                         "homeSquad": secondRoundHomeSquad,
                         "guestSquad": firstRoundHomeSquad,
+                        "home": secondRoundHomeSquad === squad.name ? true : false,
                         "date": secondRoundDate,
                         "time": secondRoundTime,
                         "result": secondRoundResult
@@ -75,6 +77,7 @@ async function scrapeMatches() {
         calendars.push({
             "name": squad.name,
             "displayName": squad.displayName,
+            "league": squad.league,
             "matches": matches
         })
     }
@@ -84,6 +87,9 @@ async function scrapeMatches() {
 
 async function updateNextMatches() {
     let calendars = await scrapeMatches()
+
+    if(calendars.length > 0)
+        nextMatches = []
 
     let today = new Date().getTime()
 
@@ -104,6 +110,7 @@ async function updateNextMatches() {
         nextMatches.push({
             "name": squad.name,
             "displayName": squad.displayName,
+            "league": squad.league,
             "nextMatch": next
         })
     }
@@ -117,6 +124,22 @@ var intervalId = setInterval(() => {
 
 // Simple API
 let app = express()
+
+app.use(function (req, res, next) {
+    const corsWhitelist = [
+        "http://localhost:8000",
+        "https://ttferrara.it"
+    ]
+
+    if(corsWhitelist.indexOf(req.headers.origin) !== -1) {
+        res.header("Access-Control-Allow-Origin", req.headers.origin)
+        res.header("Access-Control-Allow-Methods", "GET")
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+    }
+
+    next()
+})
+
 app.listen(3000)
 
 app.get("/next-matches", (req, res, next) => {
