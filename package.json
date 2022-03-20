@@ -1,0 +1,24 @@
+{
+  "name": "fitet-scraper",
+  "version": "1.0.0",
+  "description": "Scrapes data from fitet.org and makes it available through a REST API to ttferrara.it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcedavi/fitet-scraper.git"
+  },
+  "author": "Marcello Davi",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/marcedavi/fitet-scraper/issues"
+  },
+  "homepage": "https://github.com/marcedavi/fitet-scraper#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.3"
+  }
+}

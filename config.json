@@ -1,0 +1,34 @@
+{
+    "squads": [
+        {
+            "name": "A.S.D. T.T. FERRARA 'A'",
+            "displayName": "A.S.D. T.T. FERRARA A",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=12&ANNO=36"
+        },
+        {
+            "name": "A.S.D. T.T. FERRARA 'B'",
+            "displayName": "A.S.D. T.T. FERRARA B",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=40&ANNO=36"
+        },
+        {
+            "name": "A.S.D. T.T. FERRARA C",
+            "displayName": "A.S.D. T.T. FERRARA C",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=902&ANNO=36"
+        },
+        {
+            "name": "A.S.D. T.T. FERRARA D",
+            "displayName": "A.S.D. T.T. FERRARA D",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=904&ANNO=36"
+        },
+        {
+            "name": "A.S.D. T.T. FERRARA E",
+            "displayName": "A.S.D. T.T. FERRARA E",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=908&ANNO=36"
+        },
+        {
+            "name": "A.S.D. T.T. FERRARA F",
+            "displayName": "A.S.D. T.T. FERRARA F",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=909&ANNO=36"
+        }
+    ]
+}
