@@ -1,9 +1,6 @@
-const express = require("express")
 const axios = require('axios')
 const cheerio = require('cheerio')
 const config = require('./config.json')
-
-let nextMatches = []
 
 function flipDayMonth(dateString) {
     let parts = dateString.split("/")
@@ -85,11 +82,10 @@ async function scrapeMatches() {
     return calendars
 }
 
-async function updateNextMatches() {
+async function findNextMatches() {
     let calendars = await scrapeMatches()
 
-    if(calendars.length > 0)
-        nextMatches = []
+    let nextMatches = []
 
     let today = new Date().getTime()
 
@@ -115,33 +111,55 @@ async function updateNextMatches() {
         })
     }
 
+    return nextMatches
 }
 
-// Update matches every hour
-var intervalId = setInterval(() => {
-    updateNextMatches()
-}, 3600)
+async function createTable() {
+    let nextMatches = await findNextMatches()
 
-// Simple API
-let app = express()
+    let table = "<table class=\"table-auto mx-auto\">" +
+                    "<thead>" +
+                        "<tr>" +
+                            "<th>Serie</th>" +
+                            "<th>Di casa</th>" +
+                            "<th>Ospiti</th>" +
+                            "<th>Data e ora</th>" +
+                        "</tr>" +
+                        "</thead>" +
+                    "<tbody>"
+        
 
-app.use(function (req, res, next) {
-    const corsWhitelist = [
-        "http://localhost:8000",
-        "https://ttferrara.it"
-    ]
+    for (let i = 0; i < nextMatches.length; i++) {
+        let nextMatch = nextMatches[i]["nextMatch"]
 
-    if(corsWhitelist.indexOf(req.headers.origin) !== -1) {
-        res.header("Access-Control-Allow-Origin", req.headers.origin)
-        res.header("Access-Control-Allow-Methods", "GET")
-        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+        table += "<tr>"
+        
+        // League
+        table += "<td>" + nextMatches[i]['league'] + "</td>"
+
+        // Home Squad
+        if(nextMatch["homeSquad"] === nextMatches[i]["name"]) {
+            table += "<td><span class=\"font-medium\">" + nextMatches[i]['displayName'] + "</span></td>"
+        } else {
+            table += "<td>" + nextMatch["homeSquad"] + "</td>"
+        }
+
+        // Guest Squad
+        if(nextMatch["guestSquad"] === nextMatches[i]["name"]) {
+            table += "<td><span class=\"font-medium\">" + nextMatches[i]['displayName'] + "</span></td>"
+        } else {
+            table += "<td>" + nextMatch["guestSquad"] + "</td>"
+        }
+
+        // Date Time
+        table += "<td>" + nextMatch["date"].substring(0, nextMatch["date"].length - 5) + " - " + nextMatch["time"] + "</td>"
+
+        table += "</tr>"
     }
 
-    next()
-})
+    table += "</tbody></table>"
 
-app.listen(3000)
+    console.log(table)
+}
 
-app.get("/next-matches", (req, res, next) => {
-    res.json(nextMatches)
-})
+createTable()

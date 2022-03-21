@@ -1,2 +1,2 @@
 # fitet-scraper
-Scrapes data from fitet.org and makes it available through a REST API to ttferrara.it
+Scrapes data from fitet.org to create the "Upcoming matches" table for ttferrara.it
