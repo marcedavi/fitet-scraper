@@ -1,40 +1,46 @@
 {
     "squads": [
         {
-            "name": "A.S.D. T.T. FERRARA 'A'",
+            "name": "GIARA ASSICURAZIONI FERRARA 'A'",
             "displayName": "A.S.D. T.T. FERRARA A",
-            "league": "B2",
-            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=12&ANNO=36"
+            "league": "C1",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=37&ANNO=37"
         },
         {
-            "name": "A.S.D. T.T. FERRARA 'B'",
+            "name": "GIARA ASSICURAZIONI FERRARA 'B'",
             "displayName": "A.S.D. T.T. FERRARA B",
             "league": "C1",
-            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=40&ANNO=36"
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=39&ANNO=37"
         },
         {
-            "name": "A.S.D. T.T. FERRARA C",
+            "name": "GIARA ASSICURAZIONI FERRARA 'C'",
             "displayName": "A.S.D. T.T. FERRARA C",
             "league": "C2",
-            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=902&ANNO=36"
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=902&ANNO=37"
         },
         {
-            "name": "A.S.D. T.T. FERRARA D",
+            "name": "GIARA ASSICURAZIONI FERRARA 'D'",
             "displayName": "A.S.D. T.T. FERRARA D",
-            "league": "D1",
-            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=904&ANNO=36"
+            "league": "C2",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=901&ANNO=37"
         },
         {
-            "name": "A.S.D. T.T. FERRARA E",
+            "name": "GIARA ASSICURAZIONI FERRARA 'E'",
             "displayName": "A.S.D. T.T. FERRARA E",
-            "league": "D2",
-            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=908&ANNO=36"
+            "league": "D1",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=905&ANNO=37"
         },
         {
-            "name": "A.S.D. T.T. FERRARA F",
+            "name": "GIARA ASSICURAZIONI FERRARA 'F'",
             "displayName": "A.S.D. T.T. FERRARA F",
-            "league": "D2",
-            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=909&ANNO=36"
+            "league": "D3",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=913&ANNO=37"
+        },
+        {
+            "name": "GIARA ASSICURAZIONI FERRARA 'G'",
+            "displayName": "A.S.D. T.T. FERRARA G",
+            "league": "D3",
+            "calendar": "http://portale.fitet.org/risultati/campionati/Calendario.asp?CAM=914&ANNO=37"
         }
     ]
 }
